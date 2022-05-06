@@ -1,0 +1,13 @@
+Digite algo:  é de qual tipo? <class 'str'>
+ é numérico? False
+ é alfabético? False
+ é alfanumérico? False
+ é ASCII? True
+ é decimal? False
+ é dígito? False
+ é identificador? False
+ é escrito em minúsculas? False
+ pode ser impresso? True
+ é um espaço? False
+ é um título? False
+ é escrito em maiúsculas? False
