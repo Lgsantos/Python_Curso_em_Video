@@ -12,3 +12,4 @@ idade = 44
 salário = 3043.43
 print(f'O \033[31m{nome:^10}\033[m tem {idade} e ganha {salário:.1f}')
 print(f'O \033[31m{nome:*^10}\033[m tem {idade} e ganha {salário:.1f}')
+print(f'O [31m{nome:^10}[m tem {idade} e ganha {salário:.1f}')

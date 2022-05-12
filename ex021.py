@@ -10,5 +10,5 @@ mixer.init()
 mixer.music.load("Mon.mp3")
 mixer.music.play()
 import time
-time.sleep(10) #toca apenas 10 segundos da música
+time.sleep(10) #toca apenas 10 segundos da musica
 mixer.quit()
