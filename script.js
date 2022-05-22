@@ -20,8 +20,6 @@ function solucao002() {
 }
 
 //Ex003
-
-
 function solucao003() {
     document.getElementById('n1').click();
     document.getElementById('n2').click();
@@ -31,4 +29,40 @@ function solucao003() {
     document.getElementById('solucao003').innerText = `A soma de ${n1} e ${n2} é ${s}.`
 }
 
+//Ex004
+function solucao004() {
+    const conteudo = [];
+    const algo = document.getElementById('algo').value;
+    conteudo.push(document.createTextNode(`${algo} é do tipo ${typeof(algo)}`));
+    stringEval(algo, conteudo);
+}
+
+function stringEval(a, conteudo) {
+    const divSolucao004 = document.getElementById('solucao004');
+    if(divSolucao004.hasChildNodes()) {
+        divSolucao004.removeChild(divSolucao004.lastElementChild);
+    }
+    const lista = document.createElement('ul');
+    //if 'a' is a string
+    conteudo.push(document.createTextNode(`${a} tem tamanho de ${a.length} caracteres`));
+
+    //Tests if 'a' can be converted to a number
+    const aNumber = Number(a);
+    if(!Number.isNaN(aNumber)) {
+        conteudo.push(document.createTextNode(`A string '${a}' pode ser convertida no número ${aNumber}`));
+        conteudo.push(document.createTextNode(`${a} é NaN? ${Number.isNaN(aNumber)}`));
+        conteudo.push(document.createTextNode(`${a} é finito? ${Number.isFinite(aNumber)}`));
+        conteudo.push(document.createTextNode(`${a} é inteiro? ${Number.isInteger(aNumber)}`));
+        conteudo.push(document.createTextNode(`${a} é um inteiro seguro? ${Number.isSafeInteger(aNumber)}`));
+    }
+
+    //Generate the list of 'properties' of 'a'
+    for (const i of conteudo) {
+        console.log(i);
+        const item = document.createElement('li');
+        item.appendChild(i);
+        lista.appendChild(item);
+        divSolucao004.appendChild(lista); 
+    }
+}
 
