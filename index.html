@@ -5,48 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>De python para JavaScript</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>JavaScript Básico</h1>
+        <h2>Reescrevendo códigos Python em JavaScrip</h2>
+    </header>
+    <nav>
+        <a href="#">Página Inicial</a>;
+        <a href="#">Ex. Básicos</a>
+    </nav>
     <main>
-        <h1>Python para JavaScript</h1>
-        <p>Reescrevi minhas soluções para os exercícios do curso de Python do canal Curso em Vídeo para a linguagem JavaScript.</p>
+        <section id="intro">
+            <p>Reescrevi minhas soluções para os exercícios do curso de Python do canal Curso em Vídeo para a linguagem JavaScript.</p>
+        </section>
+        <section id="exerciciosBasicos">
+            <div id="ex001"></div>
+            <hr>
+            <div id="ex002">
+                <h2>Ex. 002</h2>
+                <label for="nameInput">
+                    <input type="text" id="nameInput" placeholder="Qual é o seu nome? " onchange="solucao002()">
+                </label>
+                <p id="solucao002"></p>
+            </div>
+            <hr>
+            <div id="ex003">
+                <h2>Ex. 003</h2>
+                <label for="n1">
+                    <input type="number" name="" id="n1" placeholder="Digite um número">
+                </label>
+                <label for="n2">
+                    <input type="number" name="" id="n2" placeholder="Digite outro número" on>
+                </label>
+                <label for="submit">
+                    <input type="submit" value="Enviar" onclick="solucao003()">
+                </label>
+                <p id="solucao003"></p>
+            </div>
+            <hr>
+            <div id="ex004">
+                <h2>Ex. 004</h2>
+                <label for="algo">
+                    <input type="text" name="" id="algo" onchange="solucao004()" placeholder="Digite algo">
+                </label>
+                <div id="solucao004"></div>
+            </div>
+            <hr>
+            <div id="ex005"></div>
+            <div id="ex006"></div>
+            <script src="script.js"></script>
+        </section>
     </main>
-    <section>
-        <div id="ex001"></div>
-        <hr>
-        <div id="ex002">
-            <h2>Ex. 002</h2>
-            <label for="nameInput">
-                <input type="text" id="nameInput" placeholder="Qual é o seu nome? " onchange="solucao002()">
-            </label>
-            <p id="solucao002"></p>
-        </div>
-        <hr>
-        <div id="ex003">
-            <h2>Ex. 003</h2>
-            <label for="n1">
-                <input type="number" name="" id="n1" placeholder="Digite um número">
-            </label>
-            <label for="n2">
-                <input type="number" name="" id="n2" placeholder="Digite outro número" on>
-            </label>
-            <label for="submit">
-                <input type="submit" value="Enviar" onclick="solucao003()">
-            </label>
-            <p id="solucao003"></p>
-        </div>
-        <hr>
-        <div id="ex004">
-            <h2>Ex. 004</h2>
-            <label for="algo">
-                <input type="text" name="" id="algo" onchange="solucao004()" placeholder="Digite algo">
-            </label>
-            <div id="solucao004"></div>
-        </div>
-        <hr>
-        <div id="ex005"></div>
-        <div id="ex006"></div>
-        <script src="script.js"></script>
-    </section>
+    <footer>
+
+    </footer>
 </body>
 </html>
