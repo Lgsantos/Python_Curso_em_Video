@@ -31,10 +31,19 @@ function solucao003() {
 
 //Ex004
 function solucao004() {
-    const conteudo = [];
     const algo = document.getElementById('algo').value;
-    conteudo.push(document.createTextNode(`${algo} é do tipo ${typeof(algo)}`));
-    stringEval(algo, conteudo);
+    if(algo != '') {
+        const conteudo = [];
+        
+        conteudo.push(document.createTextNode(`${algo} é do tipo ${typeof(algo)}`));
+        stringEval(algo, conteudo);
+    } else {
+        const divSolucao004 = document.getElementById('solucao004');
+    if(divSolucao004.hasChildNodes()) {
+        divSolucao004.removeChild(divSolucao004.lastElementChild);
+    }
+    }
+    
 }
 
 function stringEval(a, conteudo) {
@@ -43,7 +52,7 @@ function stringEval(a, conteudo) {
         divSolucao004.removeChild(divSolucao004.lastElementChild);
     }
     const lista = document.createElement('ul');
-    //if 'a' is a string
+    //if 'a' is just a string
     conteudo.push(document.createTextNode(`${a} tem tamanho de ${a.length} caracteres`));
 
     //Tests if 'a' can be converted to a number
@@ -66,3 +75,21 @@ function stringEval(a, conteudo) {
     }
 }
 
+//
+function solucao005() {
+    const divSolucao005 = document.getElementById('solucao005'),
+    nInput = document.getElementById("nEx005").value;
+    if (divSolucao005.hasChildNodes()) {
+        divSolucao005.removeChild(divSolucao005.lastChild);
+    }
+    const n = Number(nInput),
+    lista = document.createElement('ul'),
+    item1 = document.createElement('li'),
+    item2 = document.createElement('li'),
+    a = n - 1,
+    s = n + 1;
+    item1.appendChild(document.createTextNode(`O antecessor de ${n} é ${a}`));
+    item2.appendChild(document.createTextNode(`O sucesor de ${n} é ${s}`));
+    lista.append(item1, item2);
+    divSolucao005.appendChild(lista);
+}

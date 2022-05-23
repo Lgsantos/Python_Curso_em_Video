@@ -7,6 +7,8 @@ header {
     color: blanchedalmond;
     text-align: center;
     padding: 1rem;
+    max-width: 800px;
+    margin: auto;
 }
 header > h1, h2 {
     margin: 0;
@@ -20,8 +22,10 @@ header > h2 {
 }
 nav {
     background-color: black;
-    padding: 0.5rem;
+    padding: 1rem;
     font-size: 1.2rem;
+    max-width: 800px;
+    margin: auto;
 }
 nav > a {
     color: blanchedalmond;
@@ -32,6 +36,8 @@ nav > a:hover {
 }
 main {
     font-size: 1.6rem;
+    max-width: 800px;
+    margin: auto;
 }
 section {
     padding: 0.5rem;
