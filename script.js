@@ -115,3 +115,12 @@ function solucao006() {
     }
     divSolucao006.appendChild(lista);
 }
+
+//Ex. 007
+function resolve007() {
+    document.getElementById('input007a').click();
+    document.getElementById('input007b').click();
+    const nota1 = Number(document.getElementById('input007a').value), nota2 = Number(document.getElementById('input007b').value),
+    media = (nota1 + nota2) / 2;
+    console.log(media);
+}
