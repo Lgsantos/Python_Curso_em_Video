@@ -75,7 +75,7 @@ function stringEval(a, conteudo) {
     }
 }
 
-//
+//Ex.005
 function solucao005() {
     const divSolucao005 = document.getElementById('solucao005'),
     nInput = document.getElementById("nEx005").value;
@@ -92,4 +92,26 @@ function solucao005() {
     item2.appendChild(document.createTextNode(`O sucesor de ${n} é ${s}`));
     lista.append(item1, item2);
     divSolucao005.appendChild(lista);
+}
+
+//Ex.006
+
+function solucao006() {
+    const n = Number(document.getElementById('input006').value),
+    dobro = n * 2,
+    triplo = n * 3,
+    raiz = Math.sqrt(n),
+    divSolucao006 = document.getElementById('solucao006'),
+    lista = document.createElement('ul'),
+    item1 = document.createElement('li'),
+    item2 = document.createElement('li'),
+    item3 = document.createElement('li');
+    item1.appendChild(document.createTextNode(`O dobro de ${n} é ${dobro}`));
+    item2.appendChild(document.createTextNode(`O triplo de ${n} é ${triplo}`));
+    item3.appendChild(document.createTextNode(`A raiz de ${n} é ${raiz.toFixed(2)}`));
+    lista.append(item1, item2, item3);
+    if (divSolucao006.hasChildNodes()) {
+        divSolucao006.removeChild(divSolucao006.firstChild);
+    }
+    divSolucao006.appendChild(lista);
 }
