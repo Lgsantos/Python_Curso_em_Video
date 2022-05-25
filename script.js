@@ -133,6 +133,39 @@ function resolve008() {
     document.getElementById('solucao008').innerHTML = `${medida} metros equivale a ${c} centímetros e ${m} milímetros.`
 }
 
+//Ex. 009
+function solucao009() {
+    if (document.getElementById('solucao009').hasChildNodes()) {
+        document.getElementById('solucao009').removeChild(document.getElementById('solucao009').firstChild);
+    }
+
+    const n = Number(document.getElementById('nEx009').value),
+    lista = document.createElement('ul');
+
+    for (let i=2; i<=10; i++) {
+        item = document.createElement('li');
+        item.innerHTML = `${n} x ${i} = ${n*i}`;
+        lista.appendChild(item);
+    }
+
+    document.getElementById('solucao009').appendChild(lista);
+}
+
+//Ex. 010
+function resolve010() {
+    
+}
+
+//Ex. 011
+function resolve011() {
+    
+}
+
+//Ex. 012
+function resolve012() {
+    
+}
+
 //Funções para mostrar grupos de exercícios
 
 function mostra1_4() {
@@ -147,4 +180,11 @@ function mostra5_8() {
 }
 function esconder5ate8() {
     document.getElementById('ex5ate8').style.display = 'none';
+}
+
+function mostra9_12() {
+    document.getElementById('ex9ate12').style.display = 'block';
+}
+function esconder9ate12() {
+    document.getElementById('ex9ate12').style.display = 'none';
 }

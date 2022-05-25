@@ -18,6 +18,7 @@
             <div class="conteudoDropdown">
                 <a href="#ex001" onclick="mostra1_4()">Ex. 1 - 4</a>
                 <a href="#ex005" onclick="mostra5_8()">Ex. 5 - 8</a>
+                <a href="#ex009" onclick="mostra9_12()">Ex. 9 - 12</a>
             </div>
         </div>
     </nav>
@@ -99,6 +100,44 @@
                     <div id="solucao008"></div>
                 </div>
                 <button class="ocultar" onclick="esconder5ate8()">Ocultar Ex. 5 até 8</button>
+            </div>
+            <div id="ex9ate12">
+                <div id="ex009">
+                    <h2>Ex. 009</h2>
+                    <label for="nEx009">Digite um número inteiro:
+                        <input type="number" name="" id="nEx009" onchange="solucao009()">
+                    </label>
+                    <div id="solucao009"></div>
+                </div>
+                <hr>
+                <div id="ex010">
+                    <h2>Ex. 010</h2>
+                    <label for="input010">
+                        <input type="number" name="" id="input010" placeholder="Digite um número" onchange="solucao010()">
+                    </label>
+                    <div id="solucao010"></div>
+                </div>
+                <hr>
+                <div id="Ex. 011">
+                    <h2>Ex. 011</h2>
+                    <label for="input011a">Qual a 1a nota do aluno?
+                        <input type="number" name="" id="input011a"  min="0" max="10">
+                    </label><br>
+                    <label for="input011b">E a 2a nota do aluno?
+                        <input type="number" name="" id="input011b" min="0" max="10">
+                    </label><br>
+                    <button onclick="resolve011()">Enviar</button>
+                    <div id="solucao011"></div>
+                </div>
+                <hr>
+                <div id="ex012">
+                    <h2>Ex. 012</h2>
+                    <label for="input012">Qual é a medida em metros? 
+                        <input type="number" name="" id="input012" onchange="resolve012()">
+                    </label>
+                    <div id="solucao012"></div>
+                </div>
+                <button class="ocultar" onclick="esconder9ate12()">Ocultar Ex. 9 até 12</button>
             </div>
             <script src="script.js"></script>
         </section>
