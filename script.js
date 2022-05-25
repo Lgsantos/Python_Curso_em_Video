@@ -122,5 +122,13 @@ function resolve007() {
     document.getElementById('input007b').click();
     const nota1 = Number(document.getElementById('input007a').value), nota2 = Number(document.getElementById('input007b').value),
     media = (nota1 + nota2) / 2;
-    console.log(media);
+    document.getElementById('solucao007').innerHTML = `A média das notas do aluno é ${media.toFixed(2)}`;
+}
+
+function mostra1_4() {
+    document.getElementById('ex1ate4').style.display = 'block';
+}
+
+function mostra5_8() {
+    document.getElementById('ex5ate8').style.display = 'block';
 }

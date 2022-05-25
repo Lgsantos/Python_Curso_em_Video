@@ -7,7 +7,7 @@ header {
     color: blanchedalmond;
     text-align: center;
     padding: 1rem;
-    max-width: 800px;
+    width: 800px;
     margin: auto;
 }
 header > h1, h2 {
@@ -24,16 +24,44 @@ nav {
     background-color: black;
     padding: 1rem;
     font-size: 1.2rem;
-    max-width: 800px;
+    width: 800px;
     margin: auto;
 }
-nav > a {
+/* nav > a {
     color: blanchedalmond;
     text-decoration: none;
 }
 nav > a:hover {
     background-color: rgb(136, 136, 136);
+} */
+.dropdownButton {
+    background-color: blanchedalmond;
+    color: black;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
 }
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.conteudoDropdown {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.conteudoDropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .conteudoDropdown {display: block;}
+.conteudoDropdown a:hover {background-color: #ddd;}
 main {
     font-size: 1.6rem;
     max-width: 800px;
@@ -48,3 +76,4 @@ label {
 input {
     font-family: inherit;
 }
+#ex1ate4, #ex5ate8 {display: none;}
