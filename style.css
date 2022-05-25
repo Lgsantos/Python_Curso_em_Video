@@ -7,7 +7,7 @@ header {
     color: blanchedalmond;
     text-align: center;
     padding: 1rem;
-    width: 800px;
+    max-width: 800px;
     margin: auto;
 }
 header > h1, h2 {
@@ -24,7 +24,7 @@ nav {
     background-color: black;
     padding: 1rem;
     font-size: 1.2rem;
-    width: 800px;
+    max-width: 800px;
     margin: auto;
 }
 /* nav > a {
@@ -41,6 +41,7 @@ nav > a:hover {
     font-size: 1.2rem;
     border: none;
     border-radius: 0.5rem;
+    min-width: 100px;
 }
 .dropdown {
     position: relative;
@@ -53,6 +54,7 @@ nav > a:hover {
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    top: 3rem;
 }
 .conteudoDropdown a {
     color: black;
@@ -75,5 +77,12 @@ label {
 }
 input {
     font-family: inherit;
+    width: 100px;
 }
 #ex1ate4, #ex5ate8 {display: none;}
+.ocultar {
+    margin-top: 1rem;
+    border-radius: 25px;
+    background-color: blanchedalmond;
+    padding: 0.5rem;
+}

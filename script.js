@@ -125,10 +125,26 @@ function resolve007() {
     document.getElementById('solucao007').innerHTML = `A média das notas do aluno é ${media.toFixed(2)}`;
 }
 
+//Ex.008
+function resolve008() {
+    const medida = Number(document.getElementById('input008').value),
+    c = medida * 100,
+    m = medida * 1000;
+    document.getElementById('solucao008').innerHTML = `${medida} metros equivale a ${c} centímetros e ${m} milímetros.`
+}
+
+//Funções para mostrar grupos de exercícios
+
 function mostra1_4() {
     document.getElementById('ex1ate4').style.display = 'block';
+}
+function esconder1ate4() {
+    document.getElementById('ex1ate4').style.display = 'none';
 }
 
 function mostra5_8() {
     document.getElementById('ex5ate8').style.display = 'block';
+}
+function esconder5ate8() {
+    document.getElementById('ex5ate8').style.display = 'none';
 }
