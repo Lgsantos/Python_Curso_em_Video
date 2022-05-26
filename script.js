@@ -152,18 +152,34 @@ function solucao009() {
 }
 
 //Ex. 010
-function resolve010() {
-    
+function solucao010() {
+    const input10 = document.getElementById('input010'),
+    reais = Number(input10.value),
+    dolares = Math.floor(reais / 5.01),
+    cents = reais % 5.01;
+    document.getElementById('solucao010').innerHTML = `Com ${reais} reai(s) você pode comprar ${dolares} dólar(es) e ${cents.toFixed(2)} centavo(s) de dólar. Cotação: US$ 1,00 = R$ 5,01`;
 }
 
 //Ex. 011
-function resolve011() {
-    
+function solucao011() {
+    const input11a = document.getElementById('input011a'),
+    input11b = document.getElementById('input011b');
+    input11a.click();
+    input11b.click();
+    const largura = Number(input11a.value),
+    altura = Number(input11b.value),
+    area = largura * altura,
+    rendimento = 2,
+    litros = area / rendimento;
+    document.getElementById('solucao011').innerHTML = `Sua parede tem ${area} metros quadrados e são necessários ${litros} litros de tinta para pintá-la.`;
 }
 
 //Ex. 012
-function resolve012() {
-    
+function solucao012() {
+    const preco = Number(document.getElementById('input012').value),
+    desconto = 5,
+    precoFinal = preco * (1 - (desconto / 100));
+    document.getElementById('solucao012').innerHTML = `O preço final do produto, com desconto de ${desconto}% é de ${precoFinal.toFixed(2)} reais.`
 }
 
 //Funções para mostrar grupos de exercícios
