@@ -182,6 +182,15 @@ function solucao012() {
     document.getElementById('solucao012').innerHTML = `O preço final do produto, com desconto de ${desconto}% é de ${precoFinal.toFixed(2)} reais.`
 }
 
+//Ex. 013
+function solucao013() {
+    const input13 = document.getElementById('input013'),
+    salarioAtual = Number(input13.value),
+    aumento = 15,
+    salarioFinal = salarioAtual * (1 + aumento / 100);
+    document.getElementById('solucao013').innerHTML = `O salário final, após aumento de ${aumento}% é de ${salarioFinal} reais.`;
+}
+
 //Funções para mostrar grupos de exercícios
 
 function mostra1_4() {
@@ -203,4 +212,11 @@ function mostra9_12() {
 }
 function esconder9ate12() {
     document.getElementById('ex9ate12').style.display = 'none';
+}
+
+function mostra13_16() {
+    document.getElementById('ex13ate16').style.display = 'block';
+}
+function esconder13ate16() {
+    document.getElementById('ex13ate16').style.display = 'none';
 }

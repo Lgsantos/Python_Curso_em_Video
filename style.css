@@ -86,3 +86,13 @@ input {
     background-color: blanchedalmond;
     padding: 0.5rem;
 }
+footer {
+    text-align: center;
+    background-color: black;
+    color: blanchedalmond;
+    margin-top: 0.4rem;
+    font-size: 1.4rem;
+}
+footer > p {
+    padding: 0.2rem;
+}
