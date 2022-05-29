@@ -90,8 +90,9 @@ footer {
     text-align: center;
     background-color: black;
     color: blanchedalmond;
-    margin-top: 0.4rem;
+    margin: auto;
     font-size: 1.4rem;
+    max-width: 800px;
 }
 footer > p {
     padding: 0.2rem;

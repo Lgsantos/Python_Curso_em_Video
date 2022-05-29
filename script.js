@@ -191,6 +191,24 @@ function solucao013() {
     document.getElementById('solucao013').innerHTML = `O salário final, após aumento de ${aumento}% é de ${salarioFinal} reais.`;
 }
 
+//Ex. 014
+function solucao014() {
+    const input14 = document.getElementById('input014'),
+    celsius = Number(input14.value),
+    fahrenheit = celsius * (9/5) + 32
+    document. getElementById('solucao014').innerHTML = `${celsius.toFixed(2)} graus Celsius correspondem a ${fahrenheit.toFixed(2)} graus Fahrenheit.`
+}
+
+//Ex. 015
+function solucao015() {
+    const input15a = document.getElementById('input015a'),
+    input15b = document.getElementById('input015b'),
+    dias = Number(input15a.value),
+    km = Number(input15b.value),
+    aluguel = dias * 60 + km * 0.15
+    document.getElementById('solucao015').innerHTML = `O total a pagar pelo aluguel do carro é de R$ ${aluguel.toFixed(2)}`;
+}
+
 //Funções para mostrar grupos de exercícios
 
 function mostra1_4() {
