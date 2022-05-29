@@ -191,6 +191,14 @@ function solucao013() {
     document.getElementById('solucao013').innerHTML = `O salário final, após aumento de ${aumento}% é de ${salarioFinal} reais.`;
 }
 
+//Ex. 014
+function solucao014() {
+    const input14 = document.getElementById('input014'),
+    celsius = Number(input14.value),
+    fahrenheit = celsius * (9/5) + 32
+    document. getElementById('solucao014').innerHTML = `${celsius.toFixed(2)} graus Celsius correspondem a ${fahrenheit.toFixed(2)} graus Fahrenheit.`
+}
+
 //Funções para mostrar grupos de exercícios
 
 function mostra1_4() {
