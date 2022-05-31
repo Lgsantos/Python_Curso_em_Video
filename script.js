@@ -209,6 +209,25 @@ function solucao015() {
     document.getElementById('solucao015').innerHTML = `O total a pagar pelo aluguel do carro é de R$ ${aluguel.toFixed(2)}`;
 }
 
+//Ex. 016
+function solucao016() {
+    const input16 = document.getElementById('input016').value,
+    num = Number(input16);
+    document.getElementById('solucao016').innerHTML = `A parte inteira de ${num.toFixed(3)} é ${Math.floor(num)}`;
+}
+
+//Ex. 017
+function solucao017() {
+    document.getElementById('input017a').click();
+    document.getElementById('input017b').click();
+    const input17a = document.getElementById('input017a').value,
+    input17b = document.getElementById('input017b').value,
+    cateto_oposto = Number(input17a),
+    cateto_adjacente = Number(input17b),
+    hipotenusa = Math.hypot(cateto_oposto, cateto_adjacente);
+    document.getElementById('solucao017').innerHTML = `A hipotenusa desse triângulo é ${hipotenusa.toFixed(2)}`;
+}
+
 //Funções para mostrar grupos de exercícios
 
 function mostra1_4() {
@@ -237,4 +256,11 @@ function mostra13_16() {
 }
 function esconder13ate16() {
     document.getElementById('ex13ate16').style.display = 'none';
+}
+
+function mostra17_20() {
+    document.getElementById('ex17ate20').style.display = 'block';
+}
+function esconder17ate20() {
+    document.getElementById('ex17ate20').style.display = 'none';
 }
