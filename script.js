@@ -228,6 +228,43 @@ function solucao017() {
     document.getElementById('solucao017').innerHTML = `A hipotenusa desse triângulo é ${hipotenusa.toFixed(2)}`;
 }
 
+//Ex. 018
+function solucao018() {
+    const input18 = document.getElementById('input018').value,
+    angulo = grausParaRadianos(Number(input18)),
+    seno = Math.sin(angulo).toFixed(2),
+    cosseno = Math.cos(angulo).toFixed(2),
+    tangente = Math.tan(angulo).toFixed(2);
+    document.getElementById('solucao018').innerHTML = `Para o ângulo de ${input18} graus temos:<br>seno = ${seno}<br>cosseno = ${cosseno}<br>tangente = ${tangente}`;
+}
+
+function grausParaRadianos(g) {
+    return ((g * (Math.PI)) / 180);
+}
+
+//Ex. 019
+function solucao019() {
+    const aluno01 = document.getElementById('input019a').value,
+    aluno02 = document.getElementById('input019b').value,
+    aluno03 = document.getElementById('input019c').value,
+    aluno04 = document.getElementById('input019d').value,
+    lista = [aluno01, aluno02, aluno03, aluno04],
+    escolhido = lista[Math.floor(Math.random()*4)],
+    listaEmbaralhada = lista.sort(() => Math.random() - 0.5);
+    document.getElementById('solucao019').innerHTML = `O aluno escolhido para limpar o quadro negro foi ${escolhido}<br>${listaEmbaralhada}`;
+}
+
+//Ex. 020
+function solucao020() {
+    const aluno01 = document.getElementById('input020a').value,
+    aluno02 = document.getElementById('input020b').value,
+    aluno03 = document.getElementById('input020c').value,
+    aluno04 = document.getElementById('input020d').value,
+    lista = [aluno01, aluno02, aluno03, aluno04],
+    listaEmbaralhada = lista.sort(() => Math.random() - 0.5);
+    document.getElementById('solucao020').innerHTML = `A ordem dos alunos para limpar o quadro negro será ${listaEmbaralhada}`;
+}
+
 //Funções para mostrar grupos de exercícios
 
 function mostra1_4() {
