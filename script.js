@@ -301,3 +301,10 @@ function mostra17_20() {
 function esconder17ate20() {
     document.getElementById('ex17ate20').style.display = 'none';
 }
+
+function mostra21_24() {
+    document.getElementById('ex21ate24').style.display = 'block';
+}
+function esconder21ate24() {
+    document.getElementById('ex21ate24').style.display = 'none';
+}
