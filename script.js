@@ -231,7 +231,7 @@ function solucao017() {
 //Ex. 018
 function solucao018() {
     const input18 = document.getElementById('input018').value,
-    angulo = grausParaRadianos(Number(input18)),
+    angulo = grausParaRadianos(+(input18)),
     seno = Math.sin(angulo).toFixed(2),
     cosseno = Math.cos(angulo).toFixed(2),
     tangente = Math.tan(angulo).toFixed(2);
