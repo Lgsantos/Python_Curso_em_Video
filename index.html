@@ -241,24 +241,28 @@
             <div id="ex21ate24">
                 <div id="ex021">
                     <h2>Ex. 021</h2>
-                    <label for="input021">  
-                        <input type="number" name="" id="input021">
-                    </label>
-                    <div id="solucao021"></div>
+                    <audio id='player' controls>
+                        <source id='source' src='Mon.ogg'>
+                        Áudio não suportado.
+                    </audio>
                 </div>
                 <hr>
                 <div id="ex022">
                     <h2>Ex. 022</h2>
-                    <label for="input022">    
-                        <input type="number" name="" id="input022" placeholder="" onchange="solucao022()">
+                    <label for="input022">Qual é o seu nome completo?     
+                        <input type="string" 
+                        name="" id="input022" placeholder="" onchange="solucao022()">
                     </label>
                     <div id="solucao022"></div>
                 </div>
                 <hr>
                 <div id="Ex. 023">
                     <h2>Ex. 023</h2>
-                    <label for="input023">   
-                        <input type="string" name="" id="input023">
+                    <label for="input023">Digite um número inteiro entre 0 e 9999:    
+                        <input type="number"
+                        min="0" max="9999"
+                        name="" id="input023"
+                        onchange="solucao023()">
                     </label>
                     <div id="solucao023"></div>
                 </div>

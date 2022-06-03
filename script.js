@@ -265,6 +265,34 @@ function solucao020() {
     document.getElementById('solucao020').innerHTML = `A ordem dos alunos para limpar o quadro negro será ${listaEmbaralhada}`;
 }
 
+//Ex. 021 - Pode ser resolvido apenas com o html5
+
+//Ex. 022
+function solucao022() {
+    const nome = (document.querySelector('#input022').value).trim(),
+    nomeUpper = nome.toUpperCase(),
+    nomeLower = nome.toLowerCase(),
+    nomeLen = nome.replaceAll(' ', '').length,
+    prenome = nome.split(' ')[0];
+    document.querySelector('#solucao022').innerHTML = `Seu nome em MAIÚSCULAS: ${nomeUpper}<br>
+    Seu nome em minúsculas: ${nomeLower}<br>
+    Há ${nomeLen} letras em seu nome<br>
+    E seu prenome é ${prenome}`;
+}
+
+//Ex. 023
+function solucao023() {
+    const input23 = Number(document.querySelector('#input023').value),
+    u = Math.floor(input23 / 1 % 10),
+    d = Math.floor(input23 / 10 % 10),
+    c = Math.floor(input23 / 100 % 10),
+    m = Math.floor(input23 / 1000);
+    document.querySelector('#solucao023').innerHTML = `Unidade(s): ${u}<br>
+    Dezena(s): ${d}<br>
+    Centena(s): ${c}<br>
+    Milhar(es): ${m}`;
+}
+
 //Funções para mostrar grupos de exercícios
 
 function mostra1_4() {
