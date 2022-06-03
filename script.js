@@ -293,6 +293,14 @@ function solucao023() {
     Milhar(es): ${m}`;
 }
 
+//Ex. 024
+function solucao024() {
+    const cidade = document.querySelector('#input024').value.trim().toUpperCase();
+    document.querySelector('#solucao024').innerHTML =
+    `${cidade} começa com "SANTO"? 
+    ${cidade.startsWith('SANTO').toString().toUpperCase()}`;
+}
+
 //Funções para mostrar grupos de exercícios
 
 function mostra1_4() {
