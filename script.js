@@ -231,7 +231,7 @@ function solucao017() {
 //Ex. 018
 function solucao018() {
     const input18 = document.getElementById('input018').value,
-    angulo = grausParaRadianos(Number(input18)),
+    angulo = grausParaRadianos(+(input18)),
     seno = Math.sin(angulo).toFixed(2),
     cosseno = Math.cos(angulo).toFixed(2),
     tangente = Math.tan(angulo).toFixed(2);
@@ -263,6 +263,34 @@ function solucao020() {
     lista = [aluno01, aluno02, aluno03, aluno04],
     listaEmbaralhada = lista.sort(() => Math.random() - 0.5);
     document.getElementById('solucao020').innerHTML = `A ordem dos alunos para limpar o quadro negro será ${listaEmbaralhada}`;
+}
+
+//Ex. 021 - Pode ser resolvido apenas com o html5
+
+//Ex. 022
+function solucao022() {
+    const nome = (document.querySelector('#input022').value).trim(),
+    nomeUpper = nome.toUpperCase(),
+    nomeLower = nome.toLowerCase(),
+    nomeLen = nome.replaceAll(' ', '').length,
+    prenome = nome.split(' ')[0];
+    document.querySelector('#solucao022').innerHTML = `Seu nome em MAIÚSCULAS: ${nomeUpper}<br>
+    Seu nome em minúsculas: ${nomeLower}<br>
+    Há ${nomeLen} letras em seu nome<br>
+    E seu prenome é ${prenome}`;
+}
+
+//Ex. 023
+function solucao023() {
+    const input23 = Number(document.querySelector('#input023').value),
+    u = Math.floor(input23 / 1 % 10),
+    d = Math.floor(input23 / 10 % 10),
+    c = Math.floor(input23 / 100 % 10),
+    m = Math.floor(input23 / 1000);
+    document.querySelector('#solucao023').innerHTML = `Unidade(s): ${u}<br>
+    Dezena(s): ${d}<br>
+    Centena(s): ${c}<br>
+    Milhar(es): ${m}`;
 }
 
 //Funções para mostrar grupos de exercícios
@@ -300,4 +328,11 @@ function mostra17_20() {
 }
 function esconder17ate20() {
     document.getElementById('ex17ate20').style.display = 'none';
+}
+
+function mostra21_24() {
+    document.getElementById('ex21ate24').style.display = 'block';
+}
+function esconder21ate24() {
+    document.getElementById('ex21ate24').style.display = 'none';
 }
