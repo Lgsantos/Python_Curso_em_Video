@@ -319,6 +319,16 @@ function solucao027() {
     const nome = document.querySelector('#input027').value.trim().split(' ');
     document.querySelector('#solucao027').innerHTML = `Seu primeiro nome é ${nome[0]}.<br>Seu último nome é ${nome[nome.length - 1]}.`;
 }
+
+//Ex. 028
+function solucao028() {
+    const n = Math.floor(Math.random() * 5.9),
+    num = Number(document.querySelector('#input028').value),
+    solucao = document.querySelector('#solucao028');
+    console.log(n);
+    solucao.innerHTML = (num == n ? 'Você acertou!' : 'Você errou!');
+}
+
 //Funções para mostrar grupos de exercícios
 
 function mostra1_4() {
@@ -361,4 +371,11 @@ function mostra21_24() {
 }
 function esconder21ate24() {
     document.getElementById('ex21ate24').style.display = 'none';
+}
+
+function mostra25_28() {
+    document.getElementById('ex25ate28').style.display = 'block';
+}
+function esconder25ate28() {
+    document.getElementById('ex25ate28').style.display = 'none';
 }
