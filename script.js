@@ -379,3 +379,10 @@ function mostra25_28() {
 function esconder25ate28() {
     document.getElementById('ex25ate28').style.display = 'none';
 }
+
+function mostra29_32() {
+    document.getElementById('ex29ate32').style.display = 'block';
+}
+function esconder29ate32() {
+    document.getElementById('ex29ate32').style.display = 'none';
+}
