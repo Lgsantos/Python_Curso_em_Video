@@ -329,60 +329,12 @@ function solucao028() {
     solucao.innerHTML = (num == n ? 'Você acertou!' : 'Você errou!');
 }
 
-//Funções para mostrar grupos de exercícios
+//Funções para mostrar e esconder grupos de exercícios
 
-function mostra1_4() {
-    document.getElementById('ex1ate4').style.display = 'block';
-}
-function esconder1ate4() {
-    document.getElementById('ex1ate4').style.display = 'none';
+function mostraExercicios(exercicios) {
+    document.getElementById(exercicios).style.display = 'block';
 }
 
-function mostra5_8() {
-    document.getElementById('ex5ate8').style.display = 'block';
-}
-function esconder5ate8() {
-    document.getElementById('ex5ate8').style.display = 'none';
-}
-
-function mostra9_12() {
-    document.getElementById('ex9ate12').style.display = 'block';
-}
-function esconder9ate12() {
-    document.getElementById('ex9ate12').style.display = 'none';
-}
-
-function mostra13_16() {
-    document.getElementById('ex13ate16').style.display = 'block';
-}
-function esconder13ate16() {
-    document.getElementById('ex13ate16').style.display = 'none';
-}
-
-function mostra17_20() {
-    document.getElementById('ex17ate20').style.display = 'block';
-}
-function esconder17ate20() {
-    document.getElementById('ex17ate20').style.display = 'none';
-}
-
-function mostra21_24() {
-    document.getElementById('ex21ate24').style.display = 'block';
-}
-function esconder21ate24() {
-    document.getElementById('ex21ate24').style.display = 'none';
-}
-
-function mostra25_28() {
-    document.getElementById('ex25ate28').style.display = 'block';
-}
-function esconder25ate28() {
-    document.getElementById('ex25ate28').style.display = 'none';
-}
-
-function mostra29_32() {
-    document.getElementById('ex29ate32').style.display = 'block';
-}
-function esconder29ate32() {
-    document.getElementById('ex29ate32').style.display = 'none';
+function escondeExercicios(exercicios) {
+    document.getElementById(exercicios).style.display = 'none';
 }
