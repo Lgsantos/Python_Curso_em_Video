@@ -301,6 +301,24 @@ function solucao024() {
     ${cidade.startsWith('SANTO').toString().toUpperCase()}`;
 }
 
+//Ex. 025
+function solucao025() {
+    const nome = document.querySelector('#input025').value.trim().toUpperCase();
+    document.querySelector('#solucao025').innerHTML = `Seu nome tem "Silva"? ${nome.includes('SILVA').toString().toUpperCase()}`;
+}
+
+//Ex. 026
+function solucao026() {
+    const frase = document.querySelector('#input026').value.trim().toUpperCase(), fraseArray = frase.split('A'),
+    n = 0;
+    document.querySelector('#solucao026').innerHTML = `A letra "A" aparece ${fraseArray.length - 1} nessa frase.<br>A letra "A" aparece pela primeira vez na posição: ${frase.indexOf('A')}.<br>A letra "A" aparece pela última vez na posição: ${frase.length - fraseArray[(fraseArray.length-1)].length - 1}.`;
+}
+
+//Ex. 027
+function solucao027() {
+    const nome = document.querySelector('#input027').value.trim().split(' ');
+    document.querySelector('#solucao027').innerHTML = `Seu primeiro nome é ${nome[0]}.<br>Seu último nome é ${nome[nome.length - 1]}.`;
+}
 //Funções para mostrar grupos de exercícios
 
 function mostra1_4() {
