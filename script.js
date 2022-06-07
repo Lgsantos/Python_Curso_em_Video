@@ -296,37 +296,43 @@ function solucao023() {
 //Ex. 024
 function solucao024() {
     const cidade = document.querySelector('#input024').value.trim().toUpperCase();
-    document.querySelector('#solucao024').innerHTML =
-    `${cidade} começa com "SANTO"? 
-    ${cidade.startsWith('SANTO').toString().toUpperCase()}`;
+    solucao('solucao024', `${cidade} começa com "SANTO"? 
+    ${cidade.startsWith('SANTO').toString().toUpperCase()}`);
 }
 
 //Ex. 025
 function solucao025() {
-    const nome = document.querySelector('#input025').value.trim().toUpperCase();
-    document.querySelector('#solucao025').innerHTML = `Seu nome tem "Silva"? ${nome.includes('SILVA').toString().toUpperCase()}`;
+    const nome = input('input025').trim().toUpperCase();
+    solucao('solucao025', `Seu nome tem "Silva"? ${nome.includes('SILVA').toString().toUpperCase()}`);
 }
 
 //Ex. 026
 function solucao026() {
-    const frase = document.querySelector('#input026').value.trim().toUpperCase(), fraseArray = frase.split('A'),
+    const frase = input('input026').trim().toUpperCase(), fraseArray = frase.split('A'),
     n = 0;
-    document.querySelector('#solucao026').innerHTML = `A letra "A" aparece ${fraseArray.length - 1} nessa frase.<br>A letra "A" aparece pela primeira vez na posição: ${frase.indexOf('A')}.<br>A letra "A" aparece pela última vez na posição: ${frase.length - fraseArray[(fraseArray.length-1)].length - 1}.`;
+    solucao('solucao026', `A letra "A" aparece ${fraseArray.length - 1} nessa frase.<br>A letra "A" aparece pela primeira vez na posição: ${frase.indexOf('A')}.<br>A letra "A" aparece pela última vez na posição: ${frase.length - fraseArray[(fraseArray.length-1)].length - 1}.`);
 }
 
 //Ex. 027
 function solucao027() {
-    const nome = document.querySelector('#input027').value.trim().split(' ');
-    document.querySelector('#solucao027').innerHTML = `Seu primeiro nome é ${nome[0]}.<br>Seu último nome é ${nome[nome.length - 1]}.`;
+    const nome = input('input027').trim().split(' ');
+    solucao('solucao027', `Seu primeiro nome é ${nome[0]}.<br>Seu último nome é ${nome[nome.length - 1]}.`);
 }
 
 //Ex. 028
 function solucao028() {
     const n = Math.floor(Math.random() * 5.9),
-    num = Number(document.querySelector('#input028').value),
-    solucao = document.querySelector('#solucao028');
-    console.log(n);
-    solucao.innerHTML = (num == n ? 'Você acertou!' : 'Você errou!');
+    num = Number(input('input028'));
+    solucao('solucao028', (num == n ? 'Você acertou!' : 'Você errou!'));
+}
+//Função para pegar valor do input
+function input(id) {
+    return document.querySelector('#'+id).value;
+}
+
+//Função para mostrar solução
+function solucao(id, texto) {
+    return document.querySelector('#'+id).innerHTML = texto;
 }
 
 //Funções para mostrar e esconder grupos de exercícios
