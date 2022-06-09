@@ -325,6 +325,20 @@ function solucao028() {
     num = Number(input('input028'));
     solucao('solucao028', (num == n ? 'Você acertou!' : 'Você errou!'));
 }
+//Ex. 029
+
+//Ex. 030 - Desafio Extra que vi no instagram em 07_06_2022: somar os dois menores números de uma matriz dada
+function solucao030() {
+    const matriz = input('input030').split(',').map(x => Number(x)).sort((a, b) => a - b);
+    console.log(matriz[0]+matriz[1]);
+}
+
+//Ex. 030a - O exercício original do Curso em Vídeo
+function solucao030a() {
+    
+}
+
+
 //Função para pegar valor do input
 function input(id) {
     return document.querySelector('#'+id).value;
