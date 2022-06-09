@@ -326,6 +326,11 @@ function solucao028() {
     solucao('solucao028', (num == n ? 'Você acertou!' : 'Você errou!'));
 }
 //Ex. 029
+function solucao029() {
+    const vel = Number(input('input029'));
+    solucao('solucao029', 
+            vel > 80? `Você foi multado em ${(vel-80)*7} reais.` : `Você respeita o limite de velocidade. Parabéns!`);
+}
 
 //Ex. 030 - Desafio Extra que vi no instagram em 07_06_2022: somar os dois menores números de uma matriz dada
 function solucao030() {
@@ -335,9 +340,18 @@ function solucao030() {
 
 //Ex. 030a - O exercício original do Curso em Vídeo
 function solucao030a() {
-    
+    const num = Number(input('input030a'));
+    solucao('solucao030a', 
+            num % 2 == 0? `${num} é par.` : `${num} é ímpar.`);
 }
 
+//Ex. 031
+function solucao031() {
+    const km = Number(input('input031'));
+    solucao('solucao031',
+            km <= 200? `O preço da passagem será ${km*0.50} reais` :
+            `O preço da passagem será ${km*0.45} reais`);
+}
 
 //Função para pegar valor do input
 function input(id) {
