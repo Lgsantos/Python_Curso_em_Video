@@ -373,6 +373,14 @@ function solucao033() {
     solucao('solucao033', `${vetor[0]} é o menor valor,<br>${vetor[2]} é o maior valor`);
     alert(`${vetor[0]} é o menor valor,\n${vetor[2]} é o maior valor`);
 }
+//Ex. 034
+function solucao034() {
+    const salario = Number(input('input034'));
+    solucao('solucao034',
+        salario > 1250?
+        `Aumento será ${salario*10/100} reais`:
+        `Aumento será ${salario*15/100} reais`);
+}
 
 //Função para pegar valor do input
 function input(id) {
