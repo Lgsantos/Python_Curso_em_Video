@@ -353,6 +353,27 @@ function solucao031() {
             `O preço da passagem será ${km*0.45} reais`);
 }
 
+//Ex. 032
+function solucao032() {
+    const ano = Number(input('input032')),
+    anoAtual = new Date();
+    let texto = ``;
+    ano == 0?
+     texto = `${anoAtual.getFullYear()}` :
+     (ano % 4 == 0 & ano % 100 != 0 | 
+     ano % 400 == 0)?
+        texto = `${ano} é bissexto`:
+        texto = `${ano} não é bissexto`;
+    solucao('solucao032', texto);
+}
+//Ex. 033
+function solucao033() {
+    const n1 = Number(input('input033a')), n2 = Number(input('input033b')), n3 = Number(input('input033c')), vetor = [n1, n2, n3];
+    vetor.sort((a,b) => a - b);
+    solucao('solucao033', `${vetor[0]} é o menor valor,<br>${vetor[2]} é o maior valor`);
+    alert(`${vetor[0]} é o menor valor,\n${vetor[2]} é o maior valor`);
+}
+
 //Função para pegar valor do input
 function input(id) {
     return document.querySelector('#'+id).value;
