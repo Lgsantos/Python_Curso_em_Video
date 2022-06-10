@@ -353,6 +353,20 @@ function solucao031() {
             `O preço da passagem será ${km*0.45} reais`);
 }
 
+//Ex. 032
+function solucao032() {
+    const ano = Number(input('input032')),
+    anoAtual = new Date();
+    let texto = ``;
+    ano == 0?
+     texto = `${anoAtual.getFullYear()}` :
+     (ano % 4 == 0 & ano % 100 != 0 | 
+     ano % 400 == 0)?
+        texto = `${ano} é bissexto`:
+        texto = `${ano} não é bissexto`;
+    solucao('solucao032', texto);
+}
+
 //Função para pegar valor do input
 function input(id) {
     return document.querySelector('#'+id).value;
