@@ -366,6 +366,13 @@ function solucao032() {
         texto = `${ano} não é bissexto`;
     solucao('solucao032', texto);
 }
+//Ex. 033
+function solucao033() {
+    const n1 = Number(input('input033a')), n2 = Number(input('input033b')), n3 = Number(input('input033c')), vetor = [n1, n2, n3];
+    vetor.sort((a,b) => a - b);
+    solucao('solucao033', `${vetor[0]} é o menor valor,<br>${vetor[2]} é o maior valor`);
+    alert(`${vetor[0]} é o menor valor,\n${vetor[2]} é o maior valor`);
+}
 
 //Função para pegar valor do input
 function input(id) {

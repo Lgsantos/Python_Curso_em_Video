@@ -14,7 +14,7 @@
     </header>
     <nav>
         <div class="dropdown">
-            <button class="dropdownButton">Ex. Básicos</button>
+            <button class="dropdownButton">Ex. 01 a 36</button>
             <div class="conteudoDropdown">
                 <a href="#ex001" onclick="mostraExercicios('ex1ate4')">Ex. 1 - 4</a>
                 <a href="#ex005" onclick="mostraExercicios('ex5ate8')">Ex. 5 - 8</a>
@@ -24,6 +24,13 @@
                 <a href="#ex021" onclick="mostraExercicios('ex21ate24')">Ex. 21 - 24</a>
                 <a href="#ex025" onclick="mostraExercicios('ex25ate28')">Ex. 25 - 28</a>
                 <a href="#ex029" onclick="mostraExercicios('ex29ate32')">Ex. 29 - 32</a>
+                <a href="#ex033" onclick="mostraExercicios('ex33ate36')">Ex. 33 - 36</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropdownButton">Ex. 37 a 72</button>
+            <div class="conteudoDropdown">
+                <a href="#ex037">TBD</a>
             </div>
         </div>
     </nav>
@@ -32,7 +39,7 @@
             <p>Reescrevendo minhas soluções para os exercícios do curso de Python do canal Curso em Vídeo para a linguagem JavaScript.</p>
             <p>No menu acima, selecione as soluções dos exercícios que gostaria de ver.</p>
         </section>
-        <section id="exerciciosBasicos">
+        <section id="exercicios01a36">
             <div id="ex1ate4">
                 <div id="ex001"></div>
                 <hr>
@@ -368,6 +375,58 @@
                     <div id="solucao032"></div>
                 </div>
                 <button class="ocultar" onclick="escondeExercicios('ex29ate32')">Ocultar Ex. 29 até 32</button>
+            </div>
+            <div id="ex33ate36">
+                <div id="ex033">
+                    <h2>Ex. 033</h2>
+                    <form action="" onsubmit="solucao033();return false"
+                    class="formEx033">
+                        <label for="input033a" class="formEx033">Digite três números: n1        
+                            <input type="number" 
+                            name="" id="input033a" placeholder="">
+                        </label>
+                        <label for="input033b" class="formEx033"> n2         
+                            <input type="number" 
+                            name="" id="input033b" placeholder="">
+                        </label>
+                        <label for="input033c" class="formEx033"> n3        
+                            <input type="number" 
+                            name="" id="input033c" placeholder="">
+                        </label>
+                        <input type="submit" value="Enviar">
+                    </form>
+                    <div id="solucao033"></div>
+                </div>
+                <hr>
+                <div id="ex034">
+                    <h2>Ex. 034</h2>
+                    <label for="input034">         
+                        <input type="number" 
+                        name="" id="input034" placeholder="" onchange="solucao034()">
+                    </label>
+                    <div id="solucao034"></div>
+                </div>
+                <hr>
+                <div id="Ex. 035">
+                    <h2>Ex. 035</h2>
+                    <label for="input035">      
+                        <input type="string"
+                        name="" id="input035"
+                        onchange="solucao035()">
+                    </label>
+                    <div id="solucao035"></div>
+                </div>
+                <hr>
+                <div id="ex036">
+                    <h2>Ex. 036</h2>
+                    <label for="input036">       
+                        <input type="string" 
+                        name="" id="input036" placeholder="" onchange="solucao036()">
+                    </label>
+                    <div id="solucao036"></div>
+                </div>
+                <hr>
+                <button class="ocultar" onclick="escondeExercicios('ex33ate36')">Ocultar Ex. 33 até 36</button>
             </div>
             <script src="script.js"></script>
         </section>
