@@ -1,7 +1,7 @@
 //Ex001
-const subtitulo = document.createElement('h2');
-const solucaoExercicio = document.createElement('p');
-const exercicio = document.getElementById('ex001');
+const subtitulo = document.createElement('h2'),
+solucaoExercicio = document.createElement('p'),
+exercicio = document.getElementById('ex001');
 
 subtitulo.innerText = 'Ex. 001';
 solucaoExercicio.innerText = 'Hello World!';
