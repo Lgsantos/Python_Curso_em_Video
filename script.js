@@ -381,6 +381,40 @@ function solucao034() {
         `Aumento será ${salario*10/100} reais`:
         `Aumento será ${salario*15/100} reais`);
 }
+//Ex. 035
+function solucao035() {
+    const r1 = Number(input('input035a')),
+        r2 = Number(input('input035b')),
+        r3 = Number(input('input035c'));
+    let resultado = '';
+    if(Math.abs(r2-r3) < r1 & r1 < (r2+r3)){
+        if(Math.abs(r1-r3) < r2 & r2 < (r1+r3)){
+            if(Math.abs(r1-r2) < r3 & r3 < (r1+r2)){
+                resultado = `${r1}, ${r2} e ${r3} formam um triângulo`;
+            } else {
+                resultado = `${r1}, ${r2} e ${r3} não formam um triângulo`;
+            };
+        } else {
+            resultado = `${r1}, ${r2} e ${r3} não formam um triângulo`;
+        };
+    } else {
+        resultado = `${r1}, ${r2} e ${r3} não formam um triângulo`;
+    };
+    solucao('solucao035', resultado);
+}
+
+//Ex. 036
+function solucao036() {
+    const casa = Number(input('input036a')),
+    salario = Number(input('input036b')),
+    anos = Number(input('input036c'));
+    let prestacao = casa / (anos * 12),
+    texto = '';
+    prestacao <= salario * 30/100?
+        texto = `Sua prestação será de R$${prestacao.toFixed(2)}`:
+        texto = 'Não poderemos lhe fazer um empréstimo.';
+    solucao('solucao036', texto);
+}
 
 //Função para pegar valor do input
 function input(id) {
@@ -396,6 +430,7 @@ function solucao(id, texto) {
 
 function mostraExercicios(exercicios) {
     document.getElementById(exercicios).style.display = 'block';
+    document.location.reload();
 }
 
 function escondeExercicios(exercicios) {
