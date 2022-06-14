@@ -416,6 +416,70 @@ function solucao036() {
     solucao('solucao036', texto);
 }
 
+//Ex. 037
+function solucao037(event) {
+    const form = document.querySelector('.formEx037'),
+    data = new FormData(form);
+    let output = '';
+    for (const entry of data) {
+        output = entry[1];
+      };
+      switch (output) {
+        case '1': 
+            solucao('solucao037', `${input037.value} escrito em formato binário é ${Number(input037.value).toString(2)}`);
+            break;
+        case '2':
+            solucao('solucao037', `${input037.value} escrito em formato octagonal é ${Number(input037.value).toString(8)}`);
+            break;
+        case '3':
+            solucao('solucao037', `${input037.value} escrito em formato hexagonal é ${Number(input037.value).toString(16)}`);
+            break;
+            default:
+                solucao('solucao037', 'Número inválido!');
+      }
+}
+
+//Ex. 038
+function solucao038() {
+    const n1 = Number(input('input038a')), n2 = Number(input('input038b'));
+    // n1 > n2? solucao('solucao038', `${n1} é maior que ${n2}`):
+    // n1 < n2? solucao('solucao038', `${n2} é maior que ${n1}`):
+    // solucao('solucao038', `${n1} é igual a ${n2}`);
+    if (n1 > n2) {
+        solucao('solucao038', `${n1} é maior que ${n2}`);
+    } else if (n2 > n1) {
+        solucao('solucao038', `${n2} é maior que ${n1}`);
+    } else {
+        solucao('solucao038', `${n1} é igual a ${n2}`);
+    }
+}
+
+//Ex. 039
+function solucao039() {
+    const anoNascimento = Number(input('input039')),
+    dataAtual = new Date(), anoAtual = dataAtual.getFullYear(), idade = anoAtual - anoNascimento;
+    if (idade < 18) {
+        solucao('solucao039', `Você ainda não precisa se alistar. Faltam ${18 - idade} anos.`);
+    } else if (idade == 18) {
+        solucao('solucao039', 'Você precisa se alistar esse ano!');
+    } else {
+        solucao('solucao039', `Você já passou ${idade - 18} anos do tempo do alistamento.`);
+    }   
+}
+
+//Ex. 040
+function solucao040(event) {
+    const n1 = Number(event.target[0].value), n2 = Number(event.target[1].value),
+    media = (n1+n2)/2;
+    if (media < 5) {
+        solucao('solucao040', `A média do aluno é ${media.toFixed(1)} e ele foi reprovado.`);
+    } else if (media >= 5 & media <= 6.9) {
+        solucao('solucao040', `A média do aluno é ${media.toFixed(1)} e ele está de recuperação.`);
+    } else {
+        solucao('solucao040', `A média do aluno é ${media.toFixed(1)} e ele está aprovado.`);
+    }
+}
+
 //Função para pegar valor do input
 function input(id) {
     return document.querySelector('#'+id).value;

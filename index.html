@@ -30,7 +30,7 @@
         <div class="dropdown">
             <button class="dropdownButton">Ex. 37 a 72</button>
             <div class="conteudoDropdown">
-                <a href="#ex037">TBD</a>
+                <a href="#ex037">Ex. 37 a 40</a>
             </div>
         </div>
     </nav>
@@ -454,6 +454,82 @@
                 </div>
                 <hr>
                 <button class="ocultar" onclick="escondeExercicios('ex33ate36')">Ocultar Ex. 33 até 36</button>
+            </div>
+            <div id="ex37ate40">
+                <div id="ex037">
+                    <h2>Ex. 037</h2>
+                    <form class="formEx037" onsubmit="solucao037(event); return false">
+                        <fieldset>
+                            <legend>Conversão de números</legend>
+                            <label for="input037">Digite um número inteiro: 
+                                <input type="number" class="formEx037" id="input037">
+                            </label>
+                            <p>Quer convertê-lo para qual base?</p>
+                            <label for="input037a" class="formEx037">  
+                                <input type="radio" 
+                                name="radio037" id="input037a"
+                                value="1" checked>BINÁRIO
+                            </label><br>
+                            <label for="input037b" class="formEx037">  
+                                <input type="radio" 
+                                name="radio037" id="input037b"
+                                value="2">OCTAL
+                            </label><br>
+                            <label for="input037a" class="formEx037">  
+                                <input type="radio" 
+                                name="radio037" id="input037c"
+                                value="3">HEXADECIMAL
+                            </label><br>
+                            <input type="submit" value="Enviar">
+                        </form>
+                        <div id="solucao037"></div>
+                        </fieldset>
+                </div>
+                <hr>
+                <div id="ex038">
+                    <h2>Ex. 038</h2>
+                    <form action="" name="formEx038" onsubmit="solucao038(); return false">
+                        <label for="input038a">Digite um número:          
+                            <input type="number" 
+                            name="formEx08" id="input038a">
+                        </label><br>
+                        <label
+                        for="input038b">Digite outro número:          
+                            <input type="number" 
+                            name="formEx038" id="input038b" placeholder=""
+                        </label><br>
+                        <input type="submit" value="Enviar">
+                    </form>
+                    <div id="solucao038"></div>
+                </div>
+                <hr>
+                <div id="Ex. 039">
+                    <h2>Ex. 039</h2>
+                    <label for="input039">Qual o ano do seu nascimento? Responda usando 4 dígitos:     
+                        <input type="number"
+                        name="" id="input039"
+                        onchange="solucao039()">
+                    </label>
+                    <div id="solucao039"></div>
+                </div>
+                <hr>
+                <div id="ex040">
+                    <h2>Ex. 040</h2>
+                    <form name="formEx040" onsubmit="solucao040(event); return false">
+                        <label for="input040a">Digite a primeira nota do aluno: 
+                            <input type="number" 
+                            name="" id="input040a" placeholder="" name="formEx040"step='0.1'>
+                        </label><br>
+                        <label for="input040b">Digite a segunda nota do aluno: 
+                            <input type="number" 
+                            name="" id="input040b" placeholder="" name="formEx040"step='0.1'>
+                        </label><br>
+                        <input type="submit" value="Enviar">
+                    </form>
+                    <div id="solucao040"></div>
+                </div>
+                <hr>
+                <button class="ocultar" onclick="escondeExercicios('ex37ate40')">Ocultar Ex. 37 até 40</button>
             </div>
             <script src="script.js"></script>
         </section>
