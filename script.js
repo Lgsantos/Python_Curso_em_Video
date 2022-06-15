@@ -480,6 +480,24 @@ function solucao040(event) {
     }
 }
 
+//Ex. 041
+function solucao041() {
+    const anoNascimento = Number(input('input041')), data = new Date(),
+    anoAtual = data.getFullYear(),
+    idade = anoAtual - anoNascimento;
+    if (idade<=7) {
+        solucao('solucao041', 'A categoria do atleta é MIRIM.');
+    } else if (idade<=13) {
+        solucao('solucao041', 'A categoria do atleta é INFANTIL');
+    } else if (idade<=18) {
+        solucao('solucao041', 'A categoria do atleta é JUNIOR.');
+    } else if (idade<=30) {
+        solucao('solucao041', 'A categoria do atleta é SÊNIOR.');
+    } else {
+        solucao('solucao041', 'A categoria do atleta é MASTER.');
+    }
+}
+
 //Função para pegar valor do input
 function input(id) {
     return document.querySelector('#'+id).value;
