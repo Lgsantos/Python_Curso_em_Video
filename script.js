@@ -494,7 +494,6 @@ function solucao(id, texto) {
 
 function mostraExercicios(exercicios) {
     document.getElementById(exercicios).style.display = 'block';
-    document.location.reload();
 }
 
 function escondeExercicios(exercicios) {

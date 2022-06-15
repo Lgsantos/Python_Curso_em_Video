@@ -31,6 +31,7 @@
             <button class="dropdownButton">Ex. 37 a 72</button>
             <div class="conteudoDropdown">
                 <a href="#ex037">Ex. 37 a 40</a>
+                <a href="#ex041" onclick="mostraExercicios('ex41ate44')">Ex. 41 - 44</a>
             </div>
         </div>
     </nav>
@@ -530,6 +531,80 @@
                 </div>
                 <hr>
                 <button class="ocultar" onclick="escondeExercicios('ex37ate40')">Ocultar Ex. 37 até 40</button>
+            </div>
+            <div id="ex41ate44">
+                <div id="ex041">
+                    <h2>Ex. 041</h2>
+                    <label for="input041">Digite o ano de nascimento do atleta: 
+                        <input id="input041" type="number" onchange="solucao041()"></input>
+                    </label>
+                    <div id="solucao041"></div>
+                </div>
+                <hr>
+                <div id="ex042">
+                    <h2>Ex. 042</h2>
+                    <form action="" name="formEx042" onsubmit="solucao042(); return false">
+                        <label for="input042a">Digite comprimento reta 1:           
+                            <input type="number" 
+                            name="formEx42" id="input042a">
+                        </label><br>
+                        <label
+                        for="input042b">Digite comprimento reta 2:          
+                            <input type="number" 
+                            name="formEx042" id="input042b" placeholder="">
+                        </label><br>
+                        <label
+                        for="input042c">Digite comprimento reta 3:          
+                            <input type="number" 
+                            name="formEx042" id="input042c" placeholder="">
+                        </label><br>
+                        <input type="submit" value="Enviar">
+                    </form>
+                    <div id="solucao042"></div>
+                </div>
+                <hr>
+                <div id="Ex. 043">
+                    <h2>Ex. 043</h2>
+                    <form name="formEx043" onsubmit="solucao043(); return false">
+                        <label for="input043a">Qual é sua altura em metros?   
+                            <input type="number"
+                            name="formEx043" id="input043a"
+                            >
+                        </label><br>
+                        <label for="input043b">Qual é sua altura em metros?   
+                            <input type="number"
+                            name="formEx043" id="input043b"
+                            >
+                        </label>
+                    </form>
+                    <div id="solucao043"></div>
+                </div>
+                <hr>
+                <div id="ex044">
+                    <h2>Ex. 044</h2>
+                    <form name="formEx044" onsubmit="solucao044(event); return false">
+                        <label for="input044a">Qual o preço normal do produto? 
+                            <input type="number" 
+                            name="" id="input044a" placeholder="" name="formEx044"step='0.01'>
+                        </label><br>
+                        <fieldset>
+                            <legend>Qual a condição de pagamento?</legend>
+                            <input type="radio" 
+                            name="formEx044" id="input044b1" value="1" name="formEx044"
+                            checked>pagamento À VISTA com DINHEIRO</input><br>
+                            <input type="radio" 
+                            name="formEx044" id="input044b2" value="2" name="formEx044">pagamento À VISTA no CARTÃO</input><br>
+                            <input type="radio" 
+                            name="formEx044" id="input044b2" value="3" name="formEx044">pagamento À PRAZO até 2X no CARTÃO</input><br>
+                            <input type="radio" 
+                            name="formEx044" id="input044b2" value="4" name="formEx044">pagamento À PRAZO 3x ou mais no CARTÃO</input><br>
+                        </fieldset>
+                        <input type="submit" value="Enviar">
+                    </form>
+                    <div id="solucao044"></div>
+                </div>
+                <hr>
+                <button class="ocultar" onclick="escondeExercicios('ex41ate44')">Ocultar Ex. 41 até 44</button>
             </div>
             <script src="script.js"></script>
         </section>
