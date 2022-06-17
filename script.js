@@ -498,6 +498,33 @@ function solucao041() {
     }
 }
 
+//Ex. 042
+function solucao042() {
+    const r1 = Number(input('input042a')), r2 = Number(input('input042b')), r3 = Number(input('input042c'));
+    if (Math.abs(r2-r3) < r1 & r1 < (r2+r3)) {
+        if (Math.abs(r1-r3) < r2 & r2 < (r1+r3)) {
+            if (Math.abs(r1-r2) < r3 & r3 < (r1+r2)) {
+                if (r1==r2 & r1==r3) {
+                    solucao('solucao042', `${r1}, ${r2} e ${r3} formam um triângulo.<br>
+                    O triângulo formado é equilátero.`);
+                } else if ((r1 == r2 & r1 != r3) | (r3 == r2 & r3 != r1)) {
+                    solucao('solucao042', `${r1}, ${r2} e ${r3} formam um triângulo.<br>
+                    O triângulo formado é isósceles.`);
+                } else {
+                    solucao('solucao042', `${r1}, ${r2} e ${r3} formam um triângulo.<br>
+                    O triângulo formado é escaleno.`);
+                }
+            } else {
+                solucao('solucao042', `${r1}, ${r2} e ${r3} não formam um triângulo.`);
+            }
+        } else {
+            solucao('solucao042', `${r1}, ${r2} e ${r3} não formam um triângulo.`);
+        }
+    } else {
+        solucao('solucao042', `${r1}, ${r2} e ${r3} não formam um triângulo.`);
+    }
+}
+
 //Função para pegar valor do input
 function input(id) {
     return document.querySelector('#'+id).value;
