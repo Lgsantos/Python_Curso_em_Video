@@ -501,9 +501,9 @@ function solucao041() {
 //Ex. 042
 function solucao042() {
     const r1 = Number(input('input042a')), r2 = Number(input('input042b')), r3 = Number(input('input042c'));
-    if (Math.abs(r2-r3) < r1 & r1 < (r2+r3)) {
-        if (Math.abs(r1-r3) < r2 & r2 < (r1+r3)) {
-            if (Math.abs(r1-r2) < r3 & r3 < (r1+r2)) {
+    if (Math.abs(r2-r3) < r1 && r1 < (r2+r3)) {
+        if (Math.abs(r1-r3) < r2 && r2 < (r1+r3)) {
+            if (Math.abs(r1-r2) < r3 && r3 < (r1+r2)) {
                 if (r1==r2 & r1==r3) {
                     solucao('solucao042', `${r1}, ${r2} e ${r3} formam um triângulo.<br>
                     O triângulo formado é equilátero.`);
@@ -522,6 +522,21 @@ function solucao042() {
         }
     } else {
         solucao('solucao042', `${r1}, ${r2} e ${r3} não formam um triângulo.`);
+    }
+}
+
+//Ex. 043
+function solucao043() {
+    const altura = input('input043a'), peso = input('input043b'),
+    imc = peso / altura ** 2;
+    if (imc < 18.5) {
+        solucao('solucao043', `Seu IMC é ${imc.toFixed(1)} você está ABAIXO DO PESO.`);
+    } else if (imc < 25) {
+        solucao('solucao043', `Seu IMC é ${imc.toFixed(1)} você está no PESO IDEAL.`);
+    } else if (imc < 30) {
+        solucao('solucao043', `Seu IMC é ${imc.toFixed(1)} você está com OBESIDADE.`);
+    } else {
+        solucao('solucao043', `Seu IMC é ${imc.toFixed(1)} Você está com OBESIDADE MÓRBIA.`);
     }
 }
 
