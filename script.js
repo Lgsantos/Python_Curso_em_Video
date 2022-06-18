@@ -540,6 +540,31 @@ function solucao043() {
     }
 }
 
+//Ex. 044
+function solucao044(e) {
+    let radio, normal = e.target[0].value;
+    for (let i = 2; i < 6; i++) {
+        if (e.target[i].checked) {
+            radio = e.target[i].value;
+            switch (radio) {
+                case '1':
+                    solucao('solucao044', `O preço final do produto é ${normal * 90/100}`);
+                    break;
+                case '2':
+                    solucao('solucao044', `O preço final do produto é ${normal * 95/100}`);
+                    break;
+                case '3':
+                    solucao('solucao044', `O preço final do produto é ${normal}`);
+                break;
+                case '4':
+                    solucao('solucao044', `O preço final do produto é ${normal * 120/100}`);
+                break;
+            }
+            break;
+        }
+    }
+}
+
 //Função para pegar valor do input
 function input(id) {
     return document.querySelector('#'+id).value;
