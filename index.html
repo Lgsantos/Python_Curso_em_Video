@@ -591,14 +591,14 @@
                         <fieldset>
                             <legend>Qual a condição de pagamento?</legend>
                             <input type="radio" 
-                            name="formEx044" id="input044b1" value="1" name="formEx044"
+                            name="formEx044" id="input044b1" value="1"
                             checked>pagamento À VISTA com DINHEIRO</input><br>
                             <input type="radio" 
-                            name="formEx044" id="input044b2" value="2" name="formEx044">pagamento À VISTA no CARTÃO</input><br>
+                            name="formEx044" id="input044b2" value="2">pagamento À VISTA no CARTÃO</input><br>
                             <input type="radio" 
-                            name="formEx044" id="input044b3" value="3" name="formEx044">pagamento À PRAZO até 2X no CARTÃO</input><br>
+                            name="formEx044" id="input044b3" value="3">pagamento À PRAZO até 2X no CARTÃO</input><br>
                             <input type="radio" 
-                            name="formEx044" id="input044b4" value="4" name="formEx044">pagamento À PRAZO 3x ou mais no CARTÃO</input><br>
+                            name="formEx044" id="input044b4" value="4">pagamento À PRAZO 3x ou mais no CARTÃO</input><br>
                         </fieldset>
                         <input type="submit" value="Enviar">
                     </form>
@@ -606,6 +606,79 @@
                 </div>
                 <hr>
                 <button class="ocultar" onclick="escondeExercicios('ex41ate44')">Ocultar Ex. 41 até 44</button>
+            </div>
+            <div id="ex45ate48">
+                <div id="ex045">
+                    <h2>Ex. 045</h2>
+                    <form name="formEx045" onsubmit="solucao045(event); return false">
+                        <fieldset>
+                            <legend>Pedra, papel ou tesoura?</legend>
+                            <input type="radio" 
+                            name="formEx045" id="input045a" value="pedra"
+                            checked>Pedra</input><br>
+                            <input type="radio" 
+                            name="formEx045" id="input045b" value="papel">Papel</input><br>
+                            <input type="radio" 
+                            name="formEx045" id="input045c" value="tesoura">Tesoura</input><br>
+                        </fieldset>
+                        <input type="submit" value="Enviar">
+                    </form>
+                    <div id="solucao045"></div>
+                </div>
+                <hr>
+                <div id="ex046">
+                    <h2>Ex. 046</h2>
+                    <label for="input046">Digite o número para iniciar contagem regressiva
+                        <input id="input046" type="number" onchange="solucao046()"></input>
+                    </label>
+                    <div id="solucao046"></div>
+                </div>
+                <hr>
+                <div id="ex047">
+                    <h2>Ex. 047</h2>
+                    <form action="" name="formEx047" onsubmit="solucao047(); return false">
+                        <label for="input047a">Digite número inicial:           
+                            <input type="number" 
+                            name="formEx47" id="input047a">
+                        </label><br>
+                        <label
+                        for="input047b">Digite número final:          
+                            <input type="number" 
+                            name="formEx047" id="input047b" placeholder="">
+                        </label><br>
+                        <label
+                        for="input047c">Digite passo:          
+                            <input type="number" 
+                            name="formEx047" id="input047c" placeholder="">
+                        </label><br>
+                        <input type="submit" value="Enviar">
+                    </form>
+                    <div id="solucao047"></div>
+                </div>
+                <hr>
+                <div id="Ex. 048">
+                    <h2>Ex. 048</h2>
+                    <form name="formEx048" onsubmit="solucao048(); return false">
+                        <label for="input048a">Qual o número inteiro inicial?   
+                            <input type="number"
+                            name="formEx048" id="input048a"
+                            >
+                        </label><br>
+                        <label for="input048b">Qual o número inteiro final?  
+                            <input type="number"
+                            name="formEx048" id="input048b"
+                            >
+                        </label><br>
+                        <label for="input048c">Qual o passo?  
+                            <input type="number"
+                            name="formEx048" id="input048c"
+                            >
+                        </label><br>
+                        <input type="submit" value="Enviar">
+                    </form>
+                    <div id="solucao048"></div>
+                </div>                
+                <button class="ocultar" onclick="escondeExercicios('ex45ate48')">Ocultar Ex. 45 até 48</button>
             </div>
             <script src="script.js"></script>
         </section>
