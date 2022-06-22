@@ -571,6 +571,8 @@ function solucao045(e) {
     opcoes = ['pedra', 'papel', 'tesoura'],
     escolhaCPU = opcoes[Math.floor(Math.random()*3)];
 
+    solucao('solucao045', ' ');
+
     for (let i=1; i < 4; i++) {
         if (e.target[i].checked) {
             escolha = e.target[i].value
@@ -580,97 +582,113 @@ function solucao045(e) {
 
     switch (escolha) {
         case 'pedra':
-            solucao('solucao045', 'JO');
+            solucao1('solucao045', 'JO ');
             setTimeout(()=>{
-                solucao('solucao045', 'KEN');
+                solucao1('solucao045', 'KEN ');
             }, 500);
             setTimeout(()=>{
-                solucao('solucao045', 'PO');
+                solucao1('solucao045', 'PO ');
             }, 1000);
             if (escolhaCPU == 'pedra') {
                 setTimeout(()=>{
-                    solucao('solucao045', `Pedra com ${escolha}. Empatamos!`);
+                    solucao1('solucao045', `Pedra com ${escolha}. Empatamos!`);
                 }, 1500);
             } else if (escolhaCPU == 'papel') {
                 setTimeout(()=>{
-                    solucao('solucao045', `Papel vence ${escolha}. Você perdeu!`);
+                    solucao1('solucao045', `Papel vence ${escolha}. Você perdeu!`);
                 }, 2000);
             } else {
                 setTimeout(()=>{
-                    solucao('solucao045', `Tesoura perde de ${escolha}. Você ganhou!`);
+                    solucao1('solucao045', `Tesoura perde de ${escolha}. Você ganhou!`);
                 }, 2500);
             }
             break;
 
             case 'papel':
-                solucao('solucao045', 'JO');
+                solucao1('solucao045', 'JO ');
                 setTimeout(()=>{
-                    solucao('solucao045', 'KEN')
+                    solucao1('solucao045', 'KEN ')
                 }, 500);
                 setTimeout(()=>{
-                    solucao('solucao045', 'PO')
+                    solucao1('solucao045', 'PO ')
                 }, 1000);
                 if (escolhaCPU == 'pedra') {
                     setTimeout(()=>{
-                        solucao('solucao045', `Pedra perde de ${escolha}. Você ganhou!`);
+                        solucao1('solucao045', `Pedra perde de ${escolha}. Você ganhou!`);
                     }, 1500);
                 } else if (escolhaCPU == 'papel') {
                     setTimeout(()=>{
-                        solucao('solucao045', `Papel com ${escolha}. Empatamos!`);
+                        solucao1('solucao045', `Papel com ${escolha}. Empatamos!`);
                     }, 2000);
                 } else {
                     setTimeout(()=>{
-                        solucao('solucao045', `Tesoura vence ${escolha}. Você perdeu!`);
+                        solucao1('solucao045', `Tesoura vence ${escolha}. Você perdeu!`);
                     }, 2500);
                 }
                 break;
         
             case 'papel':
-                solucao('solucao045', 'JO');
+                solucao1('solucao045', 'JO ');
                 setTimeout(()=>{
-                    solucao('solucao045', 'KEN')
+                    solucao1('solucao045', 'KEN ')
                 }, 500);
                 setTimeout(()=>{
-                    solucao('solucao045', 'PO')
+                    solucao1('solucao045', 'PO ')
                 }, 1000);
                 if (escolhaCPU == 'pedra') {
                     setTimeout(()=>{
-                        solucao('solucao045', `Pedra perde de ${escolha}. Você ganhou!`);
+                        solucao1('solucao045', `Pedra perde de ${escolha}. Você ganhou!`);
                     }, 1500);
                 } else if (escolhaCPU == 'papel') {
                     setTimeout(()=>{
-                        solucao('solucao045', `Papel com ${escolha}. Empatamos!`);
+                        solucao1('solucao045', `Papel com ${escolha}. Empatamos!`);
                     }, 2000);
                 } else {
                     setTimeout(()=>{
-                        solucao('solucao045', `Tesoura vence ${escolha}. Você perdeu!`);
+                        solucao1('solucao045', `Tesoura vence ${escolha}. Você perdeu!`);
                     }, 2500);
                 }
                 break;
 
             case 'tesoura':
-                solucao('solucao045', 'JO');
+                solucao1('solucao045', 'JO ');
                 setTimeout(()=>{
-                    solucao('solucao045', 'KEN')
+                    solucao1('solucao045', 'KEN ')
                 }, 500);
                 setTimeout(()=>{
-                    solucao('solucao045', 'PO')
+                    solucao1('solucao045', 'PO ')
                 }, 1000);
                 if (escolhaCPU == 'pedra') {
                     setTimeout(()=>{
-                        solucao('solucao045', `Pedra vence ${escolha}. Você perdeu!`);
+                        solucao1('solucao045', `Pedra vence ${escolha}. Você perdeu!`);
                     }, 1500);
                 } else if (escolhaCPU == 'papel') {
                     setTimeout(()=>{
-                        solucao('solucao045', `Papel perde de ${escolha}. Você venceu!`);
+                        solucao1('solucao045', `Papel perde de ${escolha}. Você venceu!`);
                     }, 2000);
                 } else {
                     setTimeout(()=>{
-                        solucao('solucao045', `Tesoura com ${escolha}. Empatamos`);
+                        solucao1('solucao045', `Tesoura com ${escolha}. Empatamos`);
                     }, 2500);
                 }
                 break;
     }
+}
+
+//Ex. 046
+function solucao046() {
+    let intervalo = 500;
+    const num = Number(input('input046'));
+    solucao('solucao046', ' ');
+    
+    for (let i=0; i < num; i++) {
+        setTimeout(()=>{
+            solucao1('solucao046', `${num - i}, `);
+        }, intervalo * i); 
+    }
+    setTimeout(()=>{
+        solucao1('solucao046', `Feliz Ano Novo!!!!`);
+    }, intervalo * num);
 }
 
 //Função para pegar valor do input
@@ -681,6 +699,11 @@ function input(id) {
 //Função para mostrar solução
 function solucao(id, texto) {
     return document.querySelector('#'+id).innerHTML = texto;
+}
+
+//Função para mostrar soluções complementares, na mesma linha
+function solucao1(id, texto) {
+    return document.querySelector('#'+id).innerHTML += texto;
 }
 
 //Funções para mostrar e esconder grupos de exercícios
