@@ -565,6 +565,114 @@ function solucao044(e) {
     }
 }
 
+//Ex. 045
+function solucao045(e) {
+    let escolha = '',
+    opcoes = ['pedra', 'papel', 'tesoura'],
+    escolhaCPU = opcoes[Math.floor(Math.random()*3)];
+
+    for (let i=1; i < 4; i++) {
+        if (e.target[i].checked) {
+            escolha = e.target[i].value
+            break
+        }
+    }
+
+    switch (escolha) {
+        case 'pedra':
+            solucao('solucao045', 'JO');
+            setTimeout(()=>{
+                solucao('solucao045', 'KEN');
+            }, 500);
+            setTimeout(()=>{
+                solucao('solucao045', 'PO');
+            }, 1000);
+            if (escolhaCPU == 'pedra') {
+                setTimeout(()=>{
+                    solucao('solucao045', `Pedra com ${escolha}. Empatamos!`);
+                }, 1500);
+            } else if (escolhaCPU == 'papel') {
+                setTimeout(()=>{
+                    solucao('solucao045', `Papel vence ${escolha}. Você perdeu!`);
+                }, 2000);
+            } else {
+                setTimeout(()=>{
+                    solucao('solucao045', `Tesoura perde de ${escolha}. Você ganhou!`);
+                }, 2500);
+            }
+            break;
+
+            case 'papel':
+                solucao('solucao045', 'JO');
+                setTimeout(()=>{
+                    solucao('solucao045', 'KEN')
+                }, 500);
+                setTimeout(()=>{
+                    solucao('solucao045', 'PO')
+                }, 1000);
+                if (escolhaCPU == 'pedra') {
+                    setTimeout(()=>{
+                        solucao('solucao045', `Pedra perde de ${escolha}. Você ganhou!`);
+                    }, 1500);
+                } else if (escolhaCPU == 'papel') {
+                    setTimeout(()=>{
+                        solucao('solucao045', `Papel com ${escolha}. Empatamos!`);
+                    }, 2000);
+                } else {
+                    setTimeout(()=>{
+                        solucao('solucao045', `Tesoura vence ${escolha}. Você perdeu!`);
+                    }, 2500);
+                }
+                break;
+        
+            case 'papel':
+                solucao('solucao045', 'JO');
+                setTimeout(()=>{
+                    solucao('solucao045', 'KEN')
+                }, 500);
+                setTimeout(()=>{
+                    solucao('solucao045', 'PO')
+                }, 1000);
+                if (escolhaCPU == 'pedra') {
+                    setTimeout(()=>{
+                        solucao('solucao045', `Pedra perde de ${escolha}. Você ganhou!`);
+                    }, 1500);
+                } else if (escolhaCPU == 'papel') {
+                    setTimeout(()=>{
+                        solucao('solucao045', `Papel com ${escolha}. Empatamos!`);
+                    }, 2000);
+                } else {
+                    setTimeout(()=>{
+                        solucao('solucao045', `Tesoura vence ${escolha}. Você perdeu!`);
+                    }, 2500);
+                }
+                break;
+
+            case 'tesoura':
+                solucao('solucao045', 'JO');
+                setTimeout(()=>{
+                    solucao('solucao045', 'KEN')
+                }, 500);
+                setTimeout(()=>{
+                    solucao('solucao045', 'PO')
+                }, 1000);
+                if (escolhaCPU == 'pedra') {
+                    setTimeout(()=>{
+                        solucao('solucao045', `Pedra vence ${escolha}. Você perdeu!`);
+                    }, 1500);
+                } else if (escolhaCPU == 'papel') {
+                    setTimeout(()=>{
+                        solucao('solucao045', `Papel perde de ${escolha}. Você venceu!`);
+                    }, 2000);
+                } else {
+                    setTimeout(()=>{
+                        solucao('solucao045', `Tesoura com ${escolha}. Empatamos`);
+                    }, 2500);
+                }
+                break;
+    }
+}
+
 //Função para pegar valor do input
 function input(id) {
     return document.querySelector('#'+id).value;
