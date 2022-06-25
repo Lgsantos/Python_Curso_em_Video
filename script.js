@@ -680,7 +680,7 @@ function solucao046() {
     let intervalo = 500;
     const num = Number(input('input046'));
     solucao('solucao046', ' ');
-    
+
     for (let i=0; i < num; i++) {
         setTimeout(()=>{
             solucao1('solucao046', `${num - i}, `);
@@ -689,6 +689,17 @@ function solucao046() {
     setTimeout(()=>{
         solucao1('solucao046', `Feliz Ano Novo!!!!`);
     }, intervalo * num);
+}
+
+// Ex. 047
+function solucao047() {
+    const start = Number(input('input047a')),
+        end = Number(input('input047b')),
+        step = Number(input('input047c'));
+        solucao('solucao047', ` `);
+        for (let i = start; i <= end; i += step) {
+            solucao1('solucao047', `${i} `);
+        }
 }
 
 //Função para pegar valor do input
