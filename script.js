@@ -702,6 +702,21 @@ function solucao047() {
         }
 }
 
+// Ex. 048
+function solucao048() {
+    const start = Number(input('input048a')),
+        end = Number(input('input048b')),
+        passo = Number(input('input048c'));
+    let soma = 0, quantos = 0;
+    solucao('solucao048', ' ');
+    for (let i=start; i<=end; i+=passo) {
+        soma += i;
+        quantos++;
+        solucao1('solucao048', `${i} `);
+    }
+    solucao1('solucao048', `A soma desses ${quantos} números é ${soma}.`)
+}
+
 //Função para pegar valor do input
 function input(id) {
     return document.querySelector('#'+id).value;
