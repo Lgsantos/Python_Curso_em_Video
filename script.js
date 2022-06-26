@@ -717,6 +717,16 @@ function solucao048() {
     solucao1('solucao048', `A soma desses ${quantos} números é ${soma}.`)
 }
 
+// Ex. 049
+function solucao049() {
+    const num = Number(input('input049'));
+    let tabuada = '';
+    for (let i=1; i<=10; i++) {
+        tabuada += `<li style='list-style-type: none'>${num} x ${i} = ${num*i}</li>`
+    }
+    solucao('solucao049', tabuada);
+}
+
 //Função para pegar valor do input
 function input(id) {
     return document.querySelector('#'+id).value;
