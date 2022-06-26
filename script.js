@@ -727,6 +727,19 @@ function solucao049() {
     solucao('solucao049', tabuada);
 }
 
+// Ex. 050
+function solucao050() {
+    const arrayOfStrings = input('input050').split(', '),
+    arrayOfNumbers = arrayOfStrings.map(x => Number(x));
+    let soma = 0;
+    for (let i=0; i<=5; i++) {
+        arrayOfNumbers[i]%2==0?
+            soma += arrayOfNumbers[i]:
+            soma = soma;
+    }
+    solucao('solucao050', `A soma dos números pares que você digitou é ${soma}`);
+}
+
 //Função para pegar valor do input
 function input(id) {
     return document.querySelector('#'+id).value;
