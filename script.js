@@ -740,6 +740,17 @@ function solucao050() {
     solucao('solucao050', `A soma dos números pares que você digitou é ${soma}`);
 }
 
+// Ex. 051
+function solucao051() {
+    const termo1 = Number(input('input051a')),
+        razao = Number(input('input051b'));
+    solucao1('solucao051', 'Os primeiros 10 termos dessa PA são: ');
+    for (let i=0; i<10; i++) {
+        solucao1('solucao051', `${termo1+razao*i} `);
+    }
+    solucao1('solucao051', 'FIM');
+}
+
 //Função para pegar valor do input
 function input(id) {
     return document.querySelector('#'+id).value;
