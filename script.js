@@ -751,6 +751,22 @@ function solucao051() {
     solucao1('solucao051', 'FIM');
 }
 
+// Ex. 052
+function solucao052() {
+    const num = Number(input('input052'));
+    let soma = 0;
+    for (let i=1; i<=num; i++) {
+        if (num%i==0) {
+            soma += i;
+        }
+    }
+    if (soma == num+1) {
+        solucao('solucao052', `${num} é um número primo.`);
+    } else {
+        solucao('solucao052', `${num} não é um número primo.`);
+    }
+}
+
 //Função para pegar valor do input
 function input(id) {
     return document.querySelector('#'+id).value;
