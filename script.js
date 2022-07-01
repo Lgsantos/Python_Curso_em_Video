@@ -785,6 +785,26 @@ function solucao053() {
     }
 }
 
+// Ex. 054
+let maiores = 0, menores = 0, pessoa = 1;
+function solucao054() {
+    const ano = Number(input('input054')),
+    dataAtual = new Date,
+    anoAtual = dataAtual.getFullYear();
+    if (ano != 0) {
+        anoAtual - ano >= 18? maiores++ : menores++;
+        document.getElementById('label054').innerHTML = 
+    `Qual o ano de nascimento da ${++pessoa}ª pessoa? <input type="number" name="" id="input054"
+    onchange="solucao054()">`;
+        document.getElementById('input054').focus();
+    } else {
+        solucao('solucao054', 
+        `<li style='list-style-type: none'>Você digitou os anos de nascimento de ${pessoa-1} pessoas</li>
+        <li style='list-style-type: none'>${menores} dessas pessoas ainda não atingiram a maioridade.</li>
+        <li style='list-style-type: none'>${maiores} já são maiores.</li>`)
+    }
+}
+
 //Função para pegar valor do input
 function input(id) {
     return document.querySelector('#'+id).value;
