@@ -767,6 +767,24 @@ function solucao052() {
     }
 }
 
+// Ex. 053
+function solucao053() {
+    const frase = input('input053'),
+    fraseSemEspacos = frase.replaceAll(' ', '').toLowerCase(),
+    arrayInvertida = [];
+    let fraseInvertida = '';
+    for (l of fraseSemEspacos) {
+        arrayInvertida.unshift(l);
+    }
+    fraseInvertida = arrayInvertida.toString().replaceAll(',', '').toLowerCase();
+    //console.log(fraseSemEspacos, fraseInvertida);
+    if (fraseSemEspacos == fraseInvertida) {
+        solucao('solucao053', `A frase \"${frase}\" é um palíndromo.`);
+    } else {
+        solucao('solucao053', `A frase \"${frase}\" não é um palíndromo.`)
+    }
+}
+
 //Função para pegar valor do input
 function input(id) {
     return document.querySelector('#'+id).value;
