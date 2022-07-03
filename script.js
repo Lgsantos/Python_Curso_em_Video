@@ -805,6 +805,48 @@ function solucao054() {
     }
 }
 
+// Ex. 055
+function solucao055() {
+    const peso = Number(input('input055'));
+    let stringPesos = '',
+    vetorPesos = []
+    if (sessionStorage.getItem('pessoas')) {
+        pessoasEx055 = Number(sessionStorage.getItem('pessoas'));
+    } else {
+        pessoasEx055 = 1;
+    }
+    
+    if (peso != 0) {
+        if (sessionStorage.getItem('pesos')) {
+            stringPesos = sessionStorage.getItem('pesos');
+            stringPesos += peso + ' ';
+            sessionStorage.setItem('pesos', stringPesos);
+            pessoasEx055 += 1;
+            sessionStorage.setItem('pessoas', pessoasEx055);
+            document.getElementById('label055').innerHTML = 
+            `Qual o peso em kg da ${pessoasEx055}ª pessoa? 
+            <input type="number" id="input055" onchange="solucao055()">`;
+            document.getElementById('input055').focus();
+            console.log(pessoasEx055);
+        } else {
+            stringPesos += peso + ' ';
+            sessionStorage.setItem('pesos', stringPesos);
+            pessoasEx055 += 1;
+            sessionStorage.setItem('pessoas', pessoasEx055);
+            document.getElementById('label055').innerHTML = `Qual o peso em kg da ${pessoasEx055}ª pessoa? 
+            <input type="number" id="input055" onchange="solucao055()">`;
+            document.getElementById('input055').focus();
+            console.log(pessoasEx055);
+        }
+    } else {
+        stringPesos = sessionStorage.getItem('pesos');
+        vetorPesos = stringPesos.trim().split(' ').map(x => Number(x));
+        solucao('solucao055', `<li>O maior peso digitado foi ${Math.max(...vetorPesos)} kg.</li>
+        <li>O menor peso digitado foi ${Math.min(...vetorPesos)} kg.</li>`);
+        sessionStorage.clear();
+    }
+}
+
 //Função para pegar valor do input
 function input(id) {
     return document.querySelector('#'+id).value;
